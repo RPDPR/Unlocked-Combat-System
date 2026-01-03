@@ -439,6 +439,30 @@ namespace GOTHIC_NAMESPACE
 		return dataValue;
 	}
 
+	int Call_PullCustomDamage(int senderNpc_ID, int receiverNpc_ID)
+	{
+		int funcIndex = parser->GetIndex(zSTRING("PullCustomMagicDamage")); if (funcIndex < 0) return -1;
+
+		void* pRet = parser->CallFunc(funcIndex, senderNpc_ID, receiverNpc_ID);
+		int dataValue = *reinterpret_cast<int*>(pRet);
+
+		if (dataValue < 0) return -1;
+
+		return dataValue;
+	}
+
+	int Call_PullCustomProtection(int senderNpc_ID, int receiverNpc_ID)
+	{
+		int funcIndex = parser->GetIndex(zSTRING("PullCustomMagicProtection")); if (funcIndex < 0) return -2;
+
+		void* pRet = parser->CallFunc(funcIndex, senderNpc_ID, receiverNpc_ID);
+		int dataValue = *reinterpret_cast<int*>(pRet);
+
+		if (dataValue < -1) return -2;
+
+		return dataValue;
+	}
+
 	//0x00664210 public: void __thiscall oCNpc::oSDamageDescriptor::SetFXHit(class oCVisualFX*)
 
 	void __fastcall oCNpc_oSDamageDescriptor_SetFXHit(oCNpc::oSDamageDescriptor& self, void* vtable, oCVisualFX* vfx);
