@@ -1,3 +1,6 @@
 [submodule "UnlockedCombatSystemCore"]
 	path = UnlockedCombatSystemCore
 	url = https://github.com/RPDPR/Unlocked_Combat_System_Core.git
+[submodule "UnlockedCombatSystemLogic"]
+	path = UnlockedCombatSystemLogic
+	url = D:/UnlockedCombatSystem/UnlockedCombatSystemLogic
