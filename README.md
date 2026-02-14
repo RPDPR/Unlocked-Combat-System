@@ -2,8 +2,6 @@
 
 # UnlockedCombatSystem
 
-![Game](https://ru.wikipedia.org/wiki/Gothic_II)
-
 **UnlockedCombatSystem** is a lightweight plugin for Gothic II: Night of the Raven that fully unlocks the combat system and its operations, providing developers with complete access to every stage of the damage calculation logic.
 
 ---
