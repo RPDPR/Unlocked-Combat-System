@@ -1,3 +1,5 @@
+<img width="1195" height="672" alt="UCS_splash" src="https://github.com/user-attachments/assets/48814236-7a5a-4f3e-ac9a-205fa0194874" />
+
 # UnlockedCombatSystem
 
 ![Version](https://img.shields.io)
