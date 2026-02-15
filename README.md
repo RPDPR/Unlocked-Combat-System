@@ -11,10 +11,10 @@
 UnlockedCombatSystem aims to remove the "black box" limitations of the original engine. By unlocking combat mechanics, it allows for deep customization and precise control over how damage is processed, without compromising the game's stability.
 
 **Key Features:**
-* **Fully Unlocked Mechanics:** Complete freedom to modify core combat behavior.
-* **Damage Logic Access:** Every breakpoint in the damage calculation is exposed for intervention.
-* **High Performance:** Minimal impact on the original engine functions.
-* **Compatibility:** Designed specifically for Gothic II: Night of the Raven (Addon).
+- Fully unlocked combat mechanics
+- Access to all breakpoints in the damage calculations
+- Minimal impact on original game's engine functions
+- Compatible with Gothic II Addon
 
 ## ⚙️ Requirements
 
