@@ -72,7 +72,7 @@ You can delete the rest of the files if you are sure that you will not need to m
 You are ready to go. Write your custom code, implement the best ideas inside `UCS_logic.d` and enjoy the results!
 
 
-<img width="1195" height="672" alt="image" src="https://github.com/user-attachments/assets/ef89cd4f-b0ad-4654-9c7c-176d123dda51" />
+<img width="1672" height="940" alt="UCS_v2 0_Banner" src="https://github.com/user-attachments/assets/70bfb34f-aa1c-4fcd-bfe4-48faa6ea886c" />
 
 # UnlockedCombatSystem (UCS)
 
