@@ -74,7 +74,7 @@ You are ready to go. Write your custom code, implement the best ideas inside `UC
 
 <img width="1672" height="940" alt="UCS_2 0_Banner1" src="https://github.com/user-attachments/assets/e02a5c27-fb0e-4426-ba12-361912167ea8" />
 
-# UnlockedCombatSystem (UCS) v2.0
+# UnlockedCombatSystem (UCS)
 
 **UnlockedCombatSystem** is a powerful C++ subsystem built on the [Union Framework](https://gitlab.com). It integrates directly into the **ZenGin** engine to fully unlock the combat logic for Gothic I Classic, Gothic II: Night of the Raven, and massive mods like *Legend of Ahssun*. 
 
