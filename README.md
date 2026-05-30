@@ -151,7 +151,7 @@ You can delete the rest of the files if you are sure that you will not need to m
 2. In your project's directory (`_Work\Data\Scripts\Content\`), create a new folder named `UCS`.
 3. Extract `UCS_Consts_gXX.d` and `UCS_OnDamage_gXX.d` from the downloaded archive into this newly created `UCS` folder.
 4. Open your main `Gothic.src` file and register the scripts. **⚠️ Strict compilation order is required:**
-   * Insert the constants path `UCS\UCS_Consts_gXX.d` strictly after  `_Intern\Constants.d` and `_Intern\Classes.d`
+   * Insert the constants path `UCS\UCS_Consts_gXX.d` strictly after  `_Intern\Constants.d` and `_Intern\Classes.d` (and `_Intern\magic_intern.d` if g1)
    * Insert the pipeline path `UCS\UCS_OnDamage_gXX.d` right after `UCS\UCS_Consts_gXX.d`.
 
 > <img width="307" height="267" alt="image" src="https://github.com/user-attachments/assets/0fbb74fb-f00e-4aba-8139-cf56696e57b2" />
