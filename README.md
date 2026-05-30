@@ -128,7 +128,8 @@ Extract the archive. Each one contains:
 
 You can delete the rest of the files if you are sure that you will not need to modify another version of Gothic in the future.
 
-> <img width="149" height="172" alt="image" src="https://github.com/user-attachments/assets/73a6e0f3-970b-47c3-96ab-d181dbafa36b" /> <img width="155" height="177" alt="image" src="https://github.com/user-attachments/assets/ea785dcd-7a50-4ef5-8408-9ecc09bab0cb" />
+> <img width="149" height="172" alt="image" src="https://github.com/user-attachments/assets/73a6e0f3-970b-47c3-96ab-d181dbafa36b" />   <img width="150" height="170" alt="image" src="https://github.com/user-attachments/assets/80e37af8-c090-4aee-9fd8-923e2532f3d7" />
+
 
 
 
