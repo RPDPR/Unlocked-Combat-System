@@ -154,7 +154,9 @@ You can delete the rest of the files if you are sure that you will not need to m
    * Insert the constants path `UCS\UCS_Consts_gXX.d` strictly after  `_Intern\Constants.d` and `_Intern\Classes.d`
    * Insert the pipeline path `UCS\UCS_OnDamage_gXX.d` right after `UCS\UCS_Consts_gXX.d`.
 
+> <img width="307" height="267" alt="image" src="https://github.com/user-attachments/assets/0fbb74fb-f00e-4aba-8139-cf56696e57b2" />
 > <img width="284" height="251" alt="image" src="https://github.com/user-attachments/assets/b0113b7d-0251-49ae-97fd-bda680bce8ff" />
+
 
 5. Save file changes and go check it out to the game that all is made correctly!
 
