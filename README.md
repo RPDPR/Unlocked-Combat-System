@@ -81,10 +81,10 @@ You are ready to go. Write your custom code, implement the best ideas inside `UC
 Instead of acting as a simple plugin, UCS integrates directly into the core engine architecture to completely transcend native combat limitations. It provides developers of ZenGin-based games (such as *Gothic I Classic*, *Gothic II: Night of the Raven*, and massive total conversions like *Legend of Ahssun*) with absolute control over the entire gameplay pipeline.
 
 ### What UCS empowers developers to do:
-* **Intercept and Rewrite Damage Calculation**: Gain absolute access to every internal calculation stage and execution breakpoint mid-'OnDamage' pipeline.
-* **Utilize a Dedicated FX Engine**: Spawns and processes persistent periodic (Loop) or instantaneous effects natively, handling their full lifecycle under the hood.
-* **Access Flawless Entity Contexts**: Pull exact, real-time memory pointers of attackers and victims, completely bypassing broken native legacy lookups based on shared Blueprint IDs.
-* **Manipulate Runtime States**: Use 20+ new parser extensions (getters/setters) to hot-swap active PFX visuals, accelerate tick intervals, or inject custom logic conditions on the fly.
+* **Intercept and Rewrite Damage Calculation**: Gain absolute access to every internal calculation stage and execution breakpoint mid-`OnDamage` pipeline.
+* **Utilize a Dedicated FX Engine**: Spawns and processes persistent periodic (Loop) or instantaneous effects (like poisons, burns or any debuffs) natively, handling their full lifecycle under the hood.
+* **Manipulate Runtime States**: Use 20+ new externals (getters/setters) to fully control existing FXs: e.g. hot-swap active PFX visuals, accelerate tick intervals, or completely mutate the whole FX chain on specific script events.
+* **Access Flawless Entity Contexts**: Pull exact, real-time memory pointers of attackers and victims, completely bypassing broken native legacy lookups based on shared Instant IDs.
 
 ---
 
