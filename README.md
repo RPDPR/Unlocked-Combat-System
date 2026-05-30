@@ -63,16 +63,16 @@ You can delete the rest of the files if you are sure that you will not need to m
 
 ### 2. Integration Methods
 
-### Method A: Rapid Injection
+###№ Method A: Rapid Injection
 *Best for quickly integrating the UCS to a pre-compiled game or mod.*
 
 1. Copy `UCS_Consts_gXX.d`, `UCS_OnDamage_gXX.d` and `UCS_gXX.dll` into `\System\Autorun` folder of your Gothic directory.
 2. Start the game and check it out!
 
-### Method B: Project Integration (Recommended)
+###№ Method B: Project Integration (Recommended)
 *Best for modders building their own project from scratch or re-compiling gothic or mods.*
 
-#### Manually:
+##### Manually:
 
 1. Copy the core dynamic library `UCS_gXX.dll` into your game's `\System\Autorun\` folder (preferably packed within a `.mod` or `.vdf` volume for a final release).
 2. In your project's directory (`_Work\Data\Scripts\Content\`), create a new folder named `UCS`.
@@ -87,7 +87,7 @@ You can delete the rest of the files if you are sure that you will not need to m
 
 5. Save file changes and go check it out to the game that all is made correctly!
 
-#### Via Gothic Sourcer:
+##### Via Gothic Sourcer:
 1. Copy `UCS_gXX.dll` into the `\System\Autorun` folder (preferably within a `.mod` or `.vdf` volume).
 2. Open your project in **GothicSourcer**.
 3. Add `UCS_Consts_gXX.d` and `UCS_OnDamage_gXX.d` files to your project. It's best to create a `\UCS` folder in the root of your project for this purpose:
