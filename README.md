@@ -109,7 +109,7 @@ UCS v2.0 introduces a native engine startup callback. Inside your script files, 
 func void UCS_Init()
 {
     // Automatically triggered by C++ core on game startup
-    UCS_CreateFXProto(MyPoisonProto, 10, oEDamageIndex_Blunt, -1, "PFX_POISON", 0, 1000.0, 5, -1);
+    UCS_CreateFXProto(PoisonFXP, 10, DT_POISON, -1, "PFX_POISON", 0, 1000.0, 5, -1);
 }
 ```
 
