@@ -109,6 +109,7 @@ You can delete the rest of the files if you are sure that you will not need to m
 *Best for quickly integrating the UCS to a pre-compiled game or mod.*
 
 1. Copy `UCS_Consts_gXX.d`, `UCS_OnDamage_gXX.d` and `UCS_gXX.dll` into `\System\Autorun` folder of your Gothic directory.
+2. Start the game and check it out!
 
 #### Method B: Project Integration (Recommended)
 *Best for modders building their own project from scratch or re-compiling gothic or mods.*
@@ -124,26 +125,15 @@ You can delete the rest of the files if you are sure that you will not need to m
 
 > <img width="284" height="251" alt="image" src="https://github.com/user-attachments/assets/b0113b7d-0251-49ae-97fd-bda680bce8ff" />
 
-5. Save file changes and go check out to the game that all is made correctly!
-
-
+5. Save file changes and go check it out to the game that all is made correctly!
 
 #### Via Gothic Sourcer:
 1. Copy `UCS_gXX.dll` into the `\System\Autorun` folder (preferably within a `.mod` or `.vdf` volume).
 2. Open your project in **GothicSourcer**.
-3. Add `UCS_Consts_gXX.d` and `UCS_OnDamage_gXX.d` to your project. It's best to create a `\Utils` or `\Utilities` folder in the root of your project for this purpose, although this isn't required. Experienced scripters can choose the best location for this script based on their project's architecture:
+3. Add `UCS_Consts_gXX.d` and `UCS_OnDamage_gXX.d` files to your project. It's best to create a `\UCS` folder in the root of your project for this purpose:
    * Right-click your folder and select **"New script file"**.
-   * Name it `UCS_logic.d` or whatever you like.
-
-
-### 2. Project Integration via GothicSourcer
-
-1. Copy the core library (`UCS_g1.dll` or `UCS_g2a.dll`) into your game's `\System\Autorun\` folder.
-2. Open your mod project in **GothicSourcer**.
-3. Add the two required script files for your game version to your project tree (e.g., `UCS_Consts_g2a.d` and `UCS_OnDamage_g2a.d`).
-4. **⚠️ Critical Compilation Order:** 
-   * Insert `UCS_Consts_gXX.d` **at the very beginning** of your `.src` file (right after base game constants and classes).
-   * Insert `UCS_OnDamage_gXX.d` later, but strictly **before** any main `\Story` scripts.
+   * Select the script position in the `.src` file. **Script Order Matters,** incorrect positioning may cause compilation errors.
+   * It's required to choose a position **after** Constants.d and Classes.d files. `UCS_Consts_gXX.d` should go earlier than `UCS_OnDamage_gXX.d`.
 5. **Register External Functions:**
    * In GothicSourcer, go to **Help** -> **Show external functions**.
    * Open the provided `Externals.d` from the archive, copy its contents, and append them to the compiler definitions.
@@ -151,9 +141,9 @@ You can delete the rest of the files if you are sure that you will not need to m
 
 ---
 
-## System Initialization
+## FX Prototype Initialization
 
-UCS v2.0 introduces a native engine startup callback. Inside your script files, utilize `UCS_Init()` to define your blueprints. This is the only synchronized and safe zone to call prototype registrations:
+UCS v2.0 introduces a native engine startup callback. Inside your script files, utilize `UCS_Init()` to define your blueprints. This is the best place to call prototype registrations:
 
 ```c
 func void UCS_Init()
