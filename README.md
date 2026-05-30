@@ -89,7 +89,7 @@ The subsystem is designed specifically for Daedalus scripters, allowing you to b
 * Custom interception breakpoints inside core combat routines.
 * Minimal impact on original game performance and vanilla logic.
 
-### 🧪 Advanced Standalone FX Engine (New in v2.0)
+### 🧪 Advanced FX Engine (New in v2.0)
 * Dedicated built-in engine to safely process periodic (Loop) and instant effects.
 * Perfect for custom mechanics like realistic poisons, burning, or magic debuffs.
 * Automated state machine that fully handles effect lifecycles under the hood.
