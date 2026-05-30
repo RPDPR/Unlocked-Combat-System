@@ -69,7 +69,7 @@ You can delete the rest of the files if you are sure that you will not need to m
 1. Copy `UCS_Consts_gXX.d`, `UCS_OnDamage_gXX.d` and `UCS_gXX.dll` into `\System\Autorun` folder of your Gothic directory.
 2. Start the game and check it out!
 
-###№ Method B: Project Integration (Recommended)
+#### Method B: Project Integration (Recommended)
 *Best for modders building their own project from scratch or re-compiling gothic or mods.*
 
 ##### Manually:
