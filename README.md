@@ -71,3 +71,65 @@ You can delete the rest of the files if you are sure that you will not need to m
 ### 3. Done!
 You are ready to go. Write your custom code, implement the best ideas inside `UCS_logic.d` and enjoy the results!
 
+# UnlockedCombatSystem (UCS) v2.0
+
+### Copyright (c) 2026 RPD. All rights reserved.
+
+**UnlockedCombatSystem** is a lightweight C++ plugin built on the Union Framework for Gothic I Classic and Gothic II: Night of the Raven. It fully unlocks the engine's combat system, providing developers with absolute access to every stage of the damage calculation logic and a brand-new standalone update context engine for managing custom effects.
+
+---
+
+## Key Features
+
+* **Passive Damage Pipeline Hooks**: Access to all calculation breakpoints inside core engine loops (inherited from v1.0).
+* **Autonomous Context Engine (`ucsManager`)**: Active tracking, execution, and safe management of periodic (Loop) and instantaneous custom damage effects.
+* **Precise Entity Context Delivery**: High-accuracy `UCS_GetDamageSender` and `UCS_GetDamageReceiver` functions that bridge real-time engine pointers, completely eliminating legacy bugs related to target misidentification on shared blueprints (e.g., multiple Wolf instances).
+* **Daedalus Scripting API**: Over 20+ new external functions (getters/setters) to dynamically alter active loop contexts in real-time (modifying damage, swapping PFX, adjusting intervals).
+* **Save-Safe Lifecycle**: Internal state-machine handles all memory pools under the hood, ensuring automatic cleanup and full state preservation across save/load events.
+
+---
+
+## Quick Setup (v2.0)
+
+### 1. Download
+Get the latest pre-compiled archive from the [Releases page](https://github.com).
+
+Keep only the files required for your specific target game:
+* **For Gothic 1:** `UCS_g1.dll`, `UCS_Consts_g1.d`, `UCS_OnDamage_g1.d`
+* **For Gothic 2 NoTR:** `UCS_g2a.dll`, `UCS_Consts_g2a.d`, `UCS_OnDamage_g2a.d`
+* **Common SDK files:** `README.txt` (full offline documentation) and `Externals.d` (parser definitions)
+
+### 2. Project Integration via GothicSourcer
+
+1. Copy the core library (`UCS_g1.dll` or `UCS_g2a.dll`) into your game's `\System\Autorun\` folder.
+2. Open your mod project in **GothicSourcer**.
+3. Add the two required script files for your game version to your project tree (e.g., `UCS_Consts_g2a.d` and `UCS_OnDamage_g2a.d`).
+4. **⚠️ Critical Compilation Order:** 
+   * Insert `UCS_Consts_gXX.d` **at the very beginning** of your `.src` file (right after base game constants and classes).
+   * Insert `UCS_OnDamage_gXX.d` later, but strictly **before** any main `\Story` scripts.
+5. **Register External Functions:**
+   * In GothicSourcer, go to **Help** -> **Show external functions**.
+   * Open the provided `Externals.d` from the archive, copy its contents, and append them to the compiler definitions.
+6. **Compile** your project as usual.
+
+---
+
+## System Initialization
+
+UCS v2.0 introduces a native engine startup callback. Inside your script files, utilize `UCS_Init()` to define your blueprints. This is the only synchronized and safe zone to call prototype registrations:
+
+```c
+func void UCS_Init()
+{
+    // Automatically triggered by C++ core on game startup
+    UCS_CreateFXProto(MyPoisonProto, 10, oEDamageIndex_Blunt, -1, "PFX_POISON", 0, 1000.0, 5, -1);
+}
+```
+
+---
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+
+
