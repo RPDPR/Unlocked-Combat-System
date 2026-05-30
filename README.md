@@ -110,8 +110,8 @@ The subsystem is designed specifically for Daedalus scripters, allowing you to b
 * No access violations or crashes when passing expired or invalid data.
 
 ## Requirements
-* Gothic I Classic or Gothic II NoTR
-* Union Framework version 1.0m or newer
+* **Gothic I Classic** or **Gothic II NoTR**
+* **Union** version 1.0m or newer
 
 ---
 
