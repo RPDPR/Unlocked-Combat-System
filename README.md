@@ -1,6 +1,4 @@
 <img width="1195" height="672" alt="UCS_splash" src="https://github.com/user-attachments/assets/48814236-7a5a-4f3e-ac9a-205fa0194874" />
-<img width="1672" height="940" alt="UCS_2 0_Banner1" src="https://github.com/user-attachments/assets/e02a5c27-fb0e-4426-ba12-361912167ea8" />
-
 
 # UnlockedCombatSystem
 
@@ -74,7 +72,7 @@ You can delete the rest of the files if you are sure that you will not need to m
 You are ready to go. Write your custom code, implement the best ideas inside `UCS_logic.d` and enjoy the results!
 
 
-<img width="1672" height="940" alt="UCS_v2 0_Banner" src="https://github.com/user-attachments/assets/70bfb34f-aa1c-4fcd-bfe4-48faa6ea886c" />
+<img width="1672" height="940" alt="UCS_2 0_Banner1" src="https://github.com/user-attachments/assets/e02a5c27-fb0e-4426-ba12-361912167ea8" />
 
 # UnlockedCombatSystem (UCS)
 
@@ -121,10 +119,12 @@ You can delete the rest of the files if you are sure that you will not need to m
 2. In your project's directory (`_Work\Data\Scripts\Content\`), create a new folder named `UCS`.
 3. Extract `UCS_Consts_gXX.d` and `UCS_OnDamage_gXX.d` from the downloaded archive into this newly created `UCS` folder.
 4. Open your main `Gothic.src` file and register the scripts. **⚠️ Strict compilation order is required:**
-   * Insert the constants path `UCS\UCS_Consts_gXX.d` **at the very top** of your `.src` file (strictly right after base engine classes like `_intern\Classes.d`).
-   * Insert the pipeline path `UCS\UCS_OnDamage_gXX.d` later.
+   * Insert the constants path `UCS\UCS_Consts_gXX.d` strictly after  `_Intern\Constants.d` and `_Intern\Classes.d`
+   * Insert the pipeline path `UCS\UCS_OnDamage_gXX.d` right after `UCS\UCS_Consts_gXX.d`.
 
 <img width="284" height="251" alt="image" src="https://github.com/user-attachments/assets/b0113b7d-0251-49ae-97fd-bda680bce8ff" />
+
+5. Save file changes and go check out to the game that all is made correctly!
 
 
 
