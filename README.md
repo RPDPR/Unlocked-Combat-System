@@ -75,29 +75,39 @@ You are ready to go. Write your custom code, implement the best ideas inside `UC
 
 ### Copyright (c) 2026 RPD. All rights reserved.
 
-**UnlockedCombatSystem** is a lightweight C++ plugin built on the Union Framework for Gothic I Classic and Gothic II: Night of the Raven. It fully unlocks the engine's combat system, providing developers with absolute access to every stage of the damage calculation logic and a brand-new standalone update context engine for managing custom effects.
+**UnlockedCombatSystem (UCS)** is a powerful C++ subsystem designed to run on top of the **ZenGin** engine via the [Union Framework](https://gitlab.com/union-framework). 
 
----
+Instead of acting as a simple plugin, UCS integrates directly into the core engine architecture to completely transcend native combat limitations. It provides developers of ZenGin-based games (such as *Gothic I Classic*, *Gothic II: Night of the Raven*, and massive total conversions like *Legend of Ahssun*) with absolute control over the entire gameplay pipeline.
 
-## Key Features
-
-* **Passive Damage Pipeline Hooks**: Access to all calculation breakpoints inside core engine loops (inherited from v1.0).
-* **Autonomous Context Engine (`ucsManager`)**: Active tracking, execution, and safe management of periodic (Loop) and instantaneous custom damage effects.
-* **Precise Entity Context Delivery**: High-accuracy `UCS_GetDamageSender` and `UCS_GetDamageReceiver` functions that bridge real-time engine pointers, completely eliminating legacy bugs related to target misidentification on shared blueprints (e.g., multiple Wolf instances).
-* **Daedalus Scripting API**: Over 20+ new external functions (getters/setters) to dynamically alter active loop contexts in real-time (modifying damage, swapping PFX, adjusting intervals).
-* **Save-Safe Lifecycle**: Internal state-machine handles all memory pools under the hood, ensuring automatic cleanup and full state preservation across save/load events.
+### What UCS empowers developers to do:
+* **Intercept and Rewrite Damage Calculation**: Gain absolute access to every internal calculation stage and execution breakpoint mid-'OnDamage' pipeline.
+* **Utilize a Dedicated FX Engine**: Spawns and processes persistent periodic (Loop) or instantaneous effects natively, handling their full lifecycle under the hood.
+* **Access Flawless Entity Contexts**: Pull exact, real-time memory pointers of attackers and victims, completely bypassing broken native legacy lookups based on shared Blueprint IDs.
+* **Manipulate Runtime States**: Use 20+ new parser extensions (getters/setters) to hot-swap active PFX visuals, accelerate tick intervals, or inject custom logic conditions on the fly.
 
 ---
 
 ## Quick Setup (v2.0)
 
 ### 1. Download
-Get the latest pre-compiled archive from the [Releases page](https://github.com).
+Download the latest version from [latest release](https://github.com/RPDPR/Unlocked-Combat-System/releases/latest) page
+that matches your game version (**Gothic 1** or **Gothic 2 NoTR**).
 
-Keep only the files required for your specific target game:
-* **For Gothic 1:** `UCS_g1.dll`, `UCS_Consts_g1.d`, `UCS_OnDamage_g1.d`
-* **For Gothic 2 NoTR:** `UCS_g2a.dll`, `UCS_Consts_g2a.d`, `UCS_OnDamage_g2a.d`
-* **Common SDK files:** `README.txt` (full offline documentation) and `Externals.d` (parser definitions)
+Extract the archive. Each one contains:
+* `UCS_gXX.dll` — Core subsystem library.
+* `UCS_Consts_gXX.d` & `UCS_OnDamage_gXX.d` — Baseline setup scripts.
+* `README.txt` & `Externals.d` — Full SDK documentation reference and compiler definitions.
+* 
+You can delete the rest of the files if you are sure that you will not need to modify another version of Gothic in the future.
+
+> <img width="167" height="155" alt="!1" src="https://github.com/user-attachments/assets/3154a062-1000-4ff6-9893-8f24714a3aeb" />
+
+### 2. Integration Methods
+
+#### Method A: Rapid Injection
+*Best for quickly adding the plugin to a pre-compiled game or mod.*
+
+1. Copy `UCS.dll` and `UCS_logic.dll` into `\System\Autorun` folder of your Gothic directory.
 
 ### 2. Project Integration via GothicSourcer
 
