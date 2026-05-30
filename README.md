@@ -125,7 +125,7 @@ Extract the archive. Each one contains:
 * `UCS_gXX.dll` — Core subsystem library.
 * `UCS_Consts_gXX.d` & `UCS_OnDamage_gXX.d` — Baseline setup scripts.
 * `README.txt` & `Externals.d` — Full SDK documentation reference and compiler definitions.
-* 
+
 You can delete the rest of the files if you are sure that you will not need to modify another version of Gothic in the future.
 
 > <img width="167" height="155" alt="!1" src="https://github.com/user-attachments/assets/3154a062-1000-4ff6-9893-8f24714a3aeb" />
