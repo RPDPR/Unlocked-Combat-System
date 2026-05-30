@@ -71,9 +71,10 @@ You can delete the rest of the files if you are sure that you will not need to m
 ### 3. Done!
 You are ready to go. Write your custom code, implement the best ideas inside `UCS_logic.d` and enjoy the results!
 
-# UnlockedCombatSystem (UCS) v2.0
 
-### Copyright (c) 2026 RPD. All rights reserved.
+<img width="1195" height="672" alt="image" src="https://github.com/user-attachments/assets/ef89cd4f-b0ad-4654-9c7c-176d123dda51" />
+
+# UnlockedCombatSystem (UCS)
 
 **UnlockedCombatSystem (UCS)** is a powerful C++ subsystem designed to run on top of the **ZenGin** engine via the [Union Framework](https://gitlab.com/union-framework). 
 
@@ -105,9 +106,18 @@ You can delete the rest of the files if you are sure that you will not need to m
 ### 2. Integration Methods
 
 #### Method A: Rapid Injection
-*Best for quickly adding the plugin to a pre-compiled game or mod.*
+*Best for quickly integrating the UCS to a pre-compiled game or mod.*
 
-1. Copy `UCS.dll` and `UCS_logic.dll` into `\System\Autorun` folder of your Gothic directory.
+1. Copy `UCS_Consts_gXX.d`, `UCS_OnDamage_gXX.d` and `UCS_gXX.dll` into `\System\Autorun` folder of your Gothic directory.
+
+#### Method B: Project Integration (Recommended)
+*Best for modders building their own project from scratch or re-compiling gothic or mods.*
+
+1. Copy `UCS_gXX.dll` into the `\System\Autorun` folder (preferably within a `.mod` or `.vdf` volume).
+2. Open your project in **GothicSourcer**.
+3. Add `UCS_Consts_gXX.d` and `UCS_OnDamage_gXX.d` to your project. It's best to create a `\Utils` or `\Utilities` folder in the root of your project for this purpose, although this isn't required. Experienced scripters can choose the best location for this script based on their project's architecture:
+   * Right-click your folder and select **"New script file"**.
+   * Name it `UCS_logic.d` or whatever you like.
 
 ### 2. Project Integration via GothicSourcer
 
