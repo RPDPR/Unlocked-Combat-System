@@ -74,17 +74,46 @@ You are ready to go. Write your custom code, implement the best ideas inside `UC
 
 <img width="1672" height="940" alt="UCS_2 0_Banner1" src="https://github.com/user-attachments/assets/e02a5c27-fb0e-4426-ba12-361912167ea8" />
 
-# UnlockedCombatSystem (UCS)
+# UnlockedCombatSystem (UCS) v2.0
 
-**UnlockedCombatSystem (UCS)** is a powerful C++ subsystem designed to run on top of the **ZenGin** engine via the [Union Framework](https://gitlab.com/union-framework). 
+**UnlockedCombatSystem** is a powerful C++ subsystem built on the [Union Framework](https://gitlab.com). It integrates directly into the **ZenGin** engine to fully unlock the combat logic for Gothic I Classic, Gothic II: Night of the Raven, and massive mods like *Legend of Ahssun*. 
 
-Instead of acting as a simple plugin, UCS integrates directly into the core engine architecture to completely transcend native combat limitations. It provides developers of ZenGin-based games (such as *Gothic I Classic*, *Gothic II: Night of the Raven*, and massive total conversions like *Legend of Ahssun*) with absolute control over the entire gameplay pipeline.
+The subsystem is designed specifically for Daedalus scripters, allowing you to bypass native engine limitations and control combat mechanics directly from your `.d` files.
 
-### What UCS empowers developers to do:
-* **Intercept and Rewrite Damage Calculation**: Gain absolute access to every internal calculation stage and execution breakpoint mid-`OnDamage` pipeline.
-* **Utilize a Dedicated FX Engine**: Spawns and processes persistent periodic (Loop) or instantaneous effects (like poisons, burns or any debuffs) natively, handling their full lifecycle under the hood.
-* **Manipulate Runtime States**: Use 20+ new externals (getters/setters) to fully control existing FXs: e.g. hot-swap active PFX visuals, accelerate tick intervals, or completely mutate the whole FX chain on specific script events.
-* **Access Flawless Entity Contexts**: Pull exact, real-time memory pointers of attackers and victims, completely bypassing broken native legacy lookups based on shared Instant IDs.
+---
+
+## Key Features
+
+### ⚔️ Damage Pipeline (Legacy v1.0 Core)
+* Full access to all internal engine damage calculation stages.
+* Custom interception breakpoints inside core combat routines.
+* Minimal impact on original game performance and vanilla logic.
+
+### 🧪 Advanced FX Engine (New in v2.0)
+* Dedicated built-in engine to safely process periodic (Loop) and instant effects.
+* Perfect for custom mechanics like realistic poisons, burning, or magic debuffs.
+* Automated state machine that fully handles effect lifecycles under the hood.
+
+### 🎯 Flawless NPC Targeting (New in v2.0)
+* Instant access to exact, real-time memory pointers for attackers and victims.
+* Uses direct `UCS_GetDamageSender` and `UCS_GetDamageReceiver` calls.
+* Completely fixes vanilla bugs where identical monsters (e.g., multiple Wolves) break scripts.
+
+### 🕹️ Runtime Script Control (New in v2.0)
+* Over 20+ new external functions (getters and setters) for your scripts.
+* Change running effects on the fly based on specific script events.
+* Hot-swap active PFX visuals, adjust tick intervals, or rewrite the whole FX chain.
+
+### 💾 Save-Safe Architecture
+* Complete memory cleanup and safety checks implemented in C++.
+* Seamless state preservation across save game updates and load triggers.
+* No access violations or crashes when passing expired or invalid data.
+
+---
+
+## Requirements
+* Gothic I Classic or Gothic II NoTR
+* Union Framework version 1.0m or newer
 
 ---
 
