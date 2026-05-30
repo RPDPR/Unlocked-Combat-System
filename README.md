@@ -76,6 +76,8 @@ You are ready to go. Write your custom code, implement the best ideas inside `UC
 
 # UnlockedCombatSystem (UCS)
 
+## About the plugin
+
 **UnlockedCombatSystem** is a powerful C++ subsystem built on the [Union Framework](https://gitlab.com). It integrates directly into the **ZenGin** engine to fully unlock the combat logic for Gothic I Classic, Gothic II: Night of the Raven, and massive mods like *Legend of Ahssun*. 
 
 The subsystem is designed specifically for Daedalus scripters, allowing you to bypass native engine limitations and control combat mechanics directly from your `.d` files.
