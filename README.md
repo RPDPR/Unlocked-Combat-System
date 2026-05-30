@@ -113,11 +113,26 @@ You can delete the rest of the files if you are sure that you will not need to m
 #### Method B: Project Integration (Recommended)
 *Best for modders building their own project from scratch or re-compiling gothic or mods.*
 
+#### Manually:
+
+1. Copy the core dynamic library `UCS_gXX.dll` into your game's `\System\Autorun\` folder (preferably packed within a `.mod` or `.vdf` volume for a final release).
+2. In your project's directory (`_Work\Data\Scripts\Content\`), create a new folder named `UCS`.
+3. Extract `UCS_Consts_gXX.d` and `UCS_OnDamage_gXX.d` from the downloaded archive into this newly created `UCS` folder.
+4. Open your main `Gothic.src` file and register the scripts. **⚠️ Strict compilation order is required:**
+   * Insert the constants path `UCS\UCS_Consts_gXX.d` **at the very top** of your `.src` file (strictly right after base engine classes like `_intern\Classes.d`).
+   * Insert the pipeline path `UCS\UCS_OnDamage_gXX.d` later.
+
+<img width="284" height="251" alt="image" src="https://github.com/user-attachments/assets/b0113b7d-0251-49ae-97fd-bda680bce8ff" />
+
+
+
+#### Via Gothic Sourcer:
 1. Copy `UCS_gXX.dll` into the `\System\Autorun` folder (preferably within a `.mod` or `.vdf` volume).
 2. Open your project in **GothicSourcer**.
 3. Add `UCS_Consts_gXX.d` and `UCS_OnDamage_gXX.d` to your project. It's best to create a `\Utils` or `\Utilities` folder in the root of your project for this purpose, although this isn't required. Experienced scripters can choose the best location for this script based on their project's architecture:
    * Right-click your folder and select **"New script file"**.
    * Name it `UCS_logic.d` or whatever you like.
+
 
 ### 2. Project Integration via GothicSourcer
 
