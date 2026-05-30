@@ -82,8 +82,6 @@ You are ready to go. Write your custom code, implement the best ideas inside `UC
 
 The subsystem is designed specifically for Daedalus scripters, allowing you to bypass native engine limitations and control combat mechanics directly from your `.d` files.
 
----
-
 ## Key Features
 
 ### ⚔️ Damage Pipeline (Legacy v1.0 Core)
