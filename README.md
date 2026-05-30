@@ -89,20 +89,20 @@ The subsystem is designed specifically for Daedalus scripters, allowing you to b
 * Custom interception breakpoints inside core combat routines.
 * Minimal impact on original game performance and vanilla logic.
 
-### 🧪 Advanced FX Engine (New in v2.0)
+### 🧪 Advanced Standalone FX Engine (New in v2.0)
 * Dedicated built-in engine to safely process periodic (Loop) and instant effects.
 * Perfect for custom mechanics like realistic poisons, burning, or magic debuffs.
 * Automated state machine that fully handles effect lifecycles under the hood.
 
-### 🎯 Flawless NPC Targeting (New in v2.0)
-* Instant access to exact, real-time memory pointers for attackers and victims.
-* Uses direct `UCS_GetDamageSender` and `UCS_GetDamageReceiver` calls.
-* Completely fixes vanilla bugs where identical monsters (e.g., multiple Wolves) break scripts.
-
-### 🕹️ Runtime Script Control (New in v2.0)
+### 🕹️ Runtime FX Control (New in v2.0)
 * Over 20+ new external functions (getters and setters) for your scripts.
 * Change running effects on the fly based on specific script events.
 * Hot-swap active PFX visuals, adjust tick intervals, or rewrite the whole FX chain.
+
+### 🎯 Flawless NPC Targeting (New in v2.0)
+* Instant access to exact, real-time memory pointers for attackers and victims.
+* Uses direct `UCS_GetDamageSender` and `UCS_GetDamageReceiver` calls.
+* Completely fixes v1.0 bugs where identical monsters (e.g., multiple Wolves) break contexts.
 
 ### 💾 Save-Safe Architecture
 * Complete memory cleanup and safety checks implemented in C++.
