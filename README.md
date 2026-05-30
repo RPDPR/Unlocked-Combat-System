@@ -109,8 +109,6 @@ The subsystem is designed specifically for Daedalus scripters, allowing you to b
 * Seamless state preservation across save game updates and load triggers.
 * No access violations or crashes when passing expired or invalid data.
 
----
-
 ## Requirements
 * Gothic I Classic or Gothic II NoTR
 * Union Framework version 1.0m or newer
